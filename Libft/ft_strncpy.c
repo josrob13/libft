@@ -18,7 +18,6 @@ char *ft_strncpy(char *dst, const char *restrict src, size_t n)
 		dst[i] = '\0';
 		i++;
 	}
-	dst[i] = '\0';
 	return dst;
 }
 
@@ -29,6 +28,7 @@ int main()
 	char	*buff2;
 	buff2 = (char *) malloc(26);
 	buff2 = ft_strncpy(buff2, buff1, 6);
+	buff2[6] = '\0';
 	printf("BUfer 2: %s.-\n", buff2);
 	return 0;
 }
