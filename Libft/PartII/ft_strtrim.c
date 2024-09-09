@@ -25,7 +25,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	start;
 	int	end;
 	i = 0;
-	while (s1[i+1] != '\0' && is_inside(s1[i], set))
+	while (s1[i] != '\0' && is_inside(s1[i], set))
 		i++;
 	start = i;
 	i = ft_strlen(s1) - 1;
@@ -35,6 +35,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (start > end)
 		start = end;
 	res = (char *) malloc(end - start + 1);
+	if (!res)
+		return NULL;
 	res = ft_strncpy(res, s1 + start, (end - start));
 	res[end - start] = '\0';
 
@@ -44,7 +46,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 /*
 int main()
 {
-	char	buff1[25] = "Muy buenas";
+	char	buff1[45] = "Muyips pero que pasa peñita";
 	char	s[30] = "Muy buena";
 	char	*aux;
 	aux = ft_strtrim(buff1, s);
