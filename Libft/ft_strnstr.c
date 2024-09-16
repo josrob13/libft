@@ -6,11 +6,17 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:21:41 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 22:06:37 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 22:16:54 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	keep(int *res, int j)
+{
+	*res++;
+	*j++;
+}
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -19,14 +25,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	int	res;
 
 	i = 0;
-	res = 0;
 	if ((!big || !little) && !len)
 		return (NULL);
 	if (*little == '\0')
 		return ((char *) big);
-	res = ft_strlen(little);
-	if (res > len)
-		return (NULL);
 	while (big[i] != '\0')
 	{
 		j = 0;
@@ -39,7 +41,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				return (NULL);
 			if (little[j] == '\0' && i < len)
 				return ((char *) &big[i]);
-
 		}
 		i++;
 	}
