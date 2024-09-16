@@ -1,10 +1,18 @@
-// Las maximas librerias necesarias
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/16 16:33:46 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:14:33 by jvillagr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strrchr(const char* s, int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char* s, int c)
 {
 	char	*res;
 	res = NULL;
@@ -20,7 +28,7 @@ char *ft_strrchr(const char* s, int c)
 }
 
 /*
-int main()
+int	main()
 {
 	char	buff[25] = "Amor a Dios y al projimo";
 	char	*aux;

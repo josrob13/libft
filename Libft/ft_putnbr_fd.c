@@ -1,42 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 16:29:48 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:10:00 by jvillagr         ###   ########.fr       */
+/*   Created: 2024/09/16 16:58:31 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:10:54 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// A = src ; B = dest
-void	*ft_memmove(void *dest, const void *src, size_t n)
+static void	ft_putnbr_rec(int n, int fd)
 {
-	const unsigned char *a;
-	unsigned char *b;
-	a = (const unsigned char *)src;
-	b = (unsigned char *)dest;
-
-	if (b < a)
-		while (n--)
-			*b++ = *a++;
+	if (n < 0)
+	{
+		if (n == -2147483648)
+		{
+			ft_putnbr_rec(n / 10, fd);
+			ft_putchar_fd('8', fd);
+		}
+		else
+		{
+			ft_putchar_fd('-', fd);
+			ft_putnbr_rec(-n, fd);
+		}
+	}
+	else if (n > 9)
+	{
+		ft_putnbr_rec(n / 10, fd);
+		ft_putchar_fd(n % 10 + '0', fd);
+	}
 	else
-		while (n--)
-			b[n] = a[n];
+		ft_putchar_fd(n + '0', fd);
+}
 
-	return dest;
+void	ft_putnbr_fd(int n, int fd)
+{
+	ft_putnbr_rec(n, fd);
 }
 
 /*
-int	main()
+int main()
 {
-	char	buff[25] = "Hello, World!!";
-	ft_memmove(buff, buff + 7, 5);
-	printf("He aqui la frase: %s\n", buff);
+	int	n = INT_MIN;
+	ft_putnbr_fd(n, 1);
 	return 0;
-}
-
-*/
+}*/

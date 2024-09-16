@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 16:40:18 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:09:25 by jvillagr         ###   ########.fr       */
+/*   Created: 2024/09/16 16:57:59 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:10:32 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	int	i;
-	i = 0;
-	while (i < n)
-	{
-		if (((const unsigned char *)s)[i] == (unsigned char)c)
-			return (void *)(s + i);
-		i++;
-	}
-	return NULL;
+	write(fd, &c, 1);
 }
 
 /*
-int	main()
+int main()
 {
-	char	buffer[25] = "Hello World!!";
-	char	*r;
-	r = ft_memchr(buffer, 'o', 20);
-	if (r)
-		printf("Aqui la cadena: %s\n", r);
-	else
-		printf("Ha habido un error...\n");
-}
-*/
+	ft_putchar_fd('A', 1);
+	ft_putchar_fd('\n', 1);
+	return 0;
+}*/

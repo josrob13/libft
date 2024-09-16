@@ -1,19 +1,21 @@
-// Las maximas librerias necesarias
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/16 16:32:59 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:13:29 by jvillagr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// This includes need to be moved and replaced
-// by an elegant way
-#include "ft_strlen.c"
-#include "ft_memcpy.c"
-#include "ft_strcpy.c"
+#include "libft.h"
 
 // Size is the total bytes reservated to the dest buffer.
 // If it is equal or less than the actual length of the string on dest + NULL,
 // then that means there is no space even for the NULL char '\0'
-size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 {
 	int	i;
 	int	dst_l;
@@ -34,7 +36,7 @@ size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 }
 
 /*
-int main()
+int	main()
 {
 	int	i;
 	size_t final;

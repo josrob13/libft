@@ -1,10 +1,18 @@
-// Las maximas librerias necesarias
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/16 16:21:30 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:09:40 by jvillagr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	int	i;
 	const unsigned char *a;
@@ -22,7 +30,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 
 /*
-int main()
+int	main()
 {
 	char	buf1[25] = "HelloQ World!!";
 	char	buf2[25] = "HelloPPPK12orld!!";

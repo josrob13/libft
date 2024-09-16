@@ -1,10 +1,18 @@
-// Las maximas librerias necesarias
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/16 16:38:59 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:11:27 by jvillagr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strchr(const char* s, int c)
+#include "libft.h"
+
+char	*ft_strchr(const char* s, int c)
 {
 	while (*s != '\0')
 	{
@@ -18,7 +26,7 @@ char *ft_strchr(const char* s, int c)
 }
 
 /*
-int main()
+int	main()
 {
 	char	buff[25] = "Dios es omnipresente.";
 	char	*aux;

@@ -1,10 +1,18 @@
-// Las maximas librerias necesarias
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/16 16:34:45 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:10:08 by jvillagr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memset(void *s, int c, size_t n)
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
 {
 	int	i;
 	i = 0;
@@ -16,7 +24,7 @@ void *ft_memset(void *s, int c, size_t n)
 	return s;
 }
 /*
-int main()
+int	main()
 {
 	char buffer[15];
 

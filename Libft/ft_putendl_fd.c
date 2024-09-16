@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 16:40:18 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:09:25 by jvillagr         ###   ########.fr       */
+/*   Created: 2024/09/16 16:58:21 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:10:44 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-	i = 0;
-	while (i < n)
-	{
-		if (((const unsigned char *)s)[i] == (unsigned char)c)
-			return (void *)(s + i);
-		i++;
-	}
-	return NULL;
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }
 
 /*
-int	main()
+int main()
 {
-	char	buffer[25] = "Hello World!!";
-	char	*r;
-	r = ft_memchr(buffer, 'o', 20);
-	if (r)
-		printf("Aqui la cadena: %s\n", r);
-	else
-		printf("Ha habido un error...\n");
-}
-*/
+	char	*s = "EY! que tal";
+	ft_putendl_fd(s, 1);
+
+	return 0;
+}*/

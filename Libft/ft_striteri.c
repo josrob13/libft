@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 16:40:18 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:09:25 by jvillagr         ###   ########.fr       */
+/*   Created: 2024/09/16 16:59:22 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:13:09 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int	i;
-	i = 0;
-	while (i < n)
-	{
-		if (((const unsigned char *)s)[i] == (unsigned char)c)
-			return (void *)(s + i);
-		i++;
-	}
-	return NULL;
-}
+	unsigned int	i;
 
-/*
-int	main()
-{
-	char	buffer[25] = "Hello World!!";
-	char	*r;
-	r = ft_memchr(buffer, 'o', 20);
-	if (r)
-		printf("Aqui la cadena: %s\n", r);
-	else
-		printf("Ha habido un error...\n");
+	i = 0;
+	if (s && f)
+	{
+		while (s[i] != '\0')
+		{
+			f(i, &s[i]);
+			i++;
+		}
+	}
 }
-*/

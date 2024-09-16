@@ -1,10 +1,18 @@
-// Las maximas librerias necesarias
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/16 16:27:19 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:07:18 by jvillagr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_atoi(const char* s)
+#include "libft.h"
+
+int	ft_atoi(const char* s)
 {
 	int	res;
 	int	i;
@@ -30,7 +38,7 @@ int ft_atoi(const char* s)
 }
 
 /*
-int main()
+int	main()
 {
 	char	buff[30] = "-2147483648uy buenas corta";
 	char	buff2[30] = "2147483647";

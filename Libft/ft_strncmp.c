@@ -1,10 +1,18 @@
-// Las maximas librerias necesarias
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/16 16:40:40 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:14:05 by jvillagr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int	i;
 	i = 0;
@@ -21,7 +29,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 }
 
 /*
-int main()
+int	main()
 {
 	char	buff1[30] = "abcafac";
 	char	buff2[30] = "abcde";

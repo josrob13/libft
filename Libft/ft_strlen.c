@@ -1,10 +1,18 @@
-// Las maximas librerias necesarias
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/16 16:39:28 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:13:48 by jvillagr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
 	size_t	res;
 	res = 0;
@@ -14,7 +22,7 @@ size_t ft_strlen(const char *s)
 }
 
 /*
-int main()
+int	main()
 {
 	char	buff[25] = "HOLA!!"; // Length = 6
 	size_t 	size;

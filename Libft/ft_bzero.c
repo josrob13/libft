@@ -1,10 +1,18 @@
-// Las maximas librerias necesarias
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/16 16:34:05 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:07:28 by jvillagr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_bzero(void *s, size_t n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
 	int	i;
 	i = 0;
@@ -16,7 +24,7 @@ void ft_bzero(void *s, size_t n)
 }
 
 /*
-int main()
+int	main()
 {
 	char	buffer[10]="Holaaa!!";
 	printf("Buffer antes de la movida: %s\n", buffer);

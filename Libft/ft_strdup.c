@@ -1,11 +1,18 @@
-// Las maximas librerias necesarias
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
-#include "ft_strlen.c"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/16 16:37:50 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:12:59 by jvillagr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strdup(const char *s)
+#include "libft.h"
+
+char	*ft_strdup(const char *s)
 {
 	int	i;
 	int	total_l;
@@ -23,7 +30,7 @@ char *ft_strdup(const char *s)
 }
 
 /*
-int main()
+int	main()
 {
 	char buf1[25] = "Hello World!";
 	char *copy;

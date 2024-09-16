@@ -1,10 +1,18 @@
-// Las maximas librerias necesarias
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/16 16:28:35 by jvillagr          #+#    #+#             */
+/*   Updated: 2024/09/16 17:09:51 by jvillagr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	int	i;
 	i = 0;
@@ -17,7 +25,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 }
 
 /*
-int main()
+int	main()
 {
 	char	buffer[10]="Holaa!!";
 	char	buffer2[10]="Adioooss.";
