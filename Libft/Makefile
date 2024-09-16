@@ -6,7 +6,7 @@
 #    By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/16 13:30:31 by jvillagr          #+#    #+#              #
-#    Updated: 2024/09/16 16:17:36 by jvillagr         ###   ########.fr        #
+#    Updated: 2024/09/16 19:33:46 by jvillagr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,18 +59,6 @@ SRC = ft_isalpha.c \
 
 OBJ = ${SRC:.c=.o}
 
-B_SRC = ft_lstnew.c \
-		ft_lstadd_front.c \
-		ft_lstsize.c \
-		ft_lstlast.c \
-		ft_lstadd_back.c \
-		ft_lstdelone.c \
-		ft_lstclear.c \
-		ft_lstiter.c \
-		ft_lstmap.c
-
-B_OBJ = ${B_SRC:.c=.o}
-
 FLAGS = -Wall -Werror -Wextra
 
 INCLUDE = libft.h
@@ -86,10 +74,6 @@ ${NAME}: start ${OBJ} ${INCLUDE}
 
 %.o: %.c
 	@${CC} ${CCFLAGS} -c -o $@ $<
-
-bonus: start ${B_OBJ} ${INCLUDE}
-	@${LIB} ${NAME} ${B_OBJ}
-	@echo "$(GREEN)Libft compiled with bonus ✓$(NOC)"
 
 clean:
 	@rm -f ${OBJ} ${B_OBJ}

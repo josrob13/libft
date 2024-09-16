@@ -6,18 +6,20 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:54:45 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 18:55:11 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 19:40:02 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int count_digits(int n)
+static	int	count_digits(int n)
 {
 	int	cont;
 
 	cont = 0;
-	if (n <= 0)
+	if (n == 0)
+		return (1);
+	if (n < 0)
 		cont++;
 	while (n)
 	{

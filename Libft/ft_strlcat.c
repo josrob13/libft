@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:32:59 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:13:29 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 20:05:11 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,23 @@
 // then that means there is no space even for the NULL char '\0'
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 {
-	int	i;
-	int	dst_l;
-	int	src_l;
-	i = 0;
+	size_t	rest;
+	size_t	dst_l;
+	size_t	src_l;
+
 	dst_l = ft_strlen(dst);
 	src_l = ft_strlen(src);
-	if (size <= dst_l + 1)		// Comparing reserved bytes
+	if (size <= dst_l)		// Comparing reserved bytes
 		return (size + src_l);
-	if (src_l < size - dst_l - 1)
-		ft_memcpy(dst + dst_l, src, src_l + 1);
-	else
+
+	rest = size - dst_l - 1;
+	if (rest > 0)
 	{
-		ft_memcpy(dst + dst_l, src, size - dst_l - 1);
-		dst[size - 1] = '\0';
+		ft_memcpy(dst + dst_l, src, rest);
+		dst[dst_l + rest] = '\0';
 	}
-	return (dst_l + src_l);
+
+	return (dst_l + rest);
 }
 
 /*

@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:59:05 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:11:11 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 20:33:30 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static size_t	howmany(char const *s, char c)
 {
-	int	i;
-	int	in_substr;
 	size_t	res;
+	int		i;
+	int		in_substr;
 
 	res = 0;
 	in_substr = 0;
@@ -58,10 +58,10 @@ static char	*extract(char const *s, size_t len)
 
 char	**ft_split(char const *s, char c)
 {
-	char		**res;
 	char const	*start;
-	int		i;
+	char		**res;
 	size_t		len;
+	int			i;
 
 	i = 0;
 	len = 0;
@@ -72,10 +72,10 @@ char	**ft_split(char const *s, char c)
 	{
 		if (*s != c && len++ == 0)
 			start = s;
-		if ((*s == c || *(s+1) == '\0') && len > 0)
+		if ((*s == c || *(s + 1) == '\0') && len > 0)
 		{
 			res[i++] = extract(start, len);
-			if (!res[i-1])
+			if (!res[i - 1])
 				return (free_mem(res, i));
 			len = 0;
 		}
