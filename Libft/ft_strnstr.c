@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:21:41 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 21:28:38 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 21:41:38 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	res = 0;
-	if ((!big || !little) && !len)
+	if (!little || *little == '\0')
+		return (NULL);
+	if (!big)
 		return (NULL);
 	if (little[i] == '\0')
 		return ((char *) big);
@@ -61,7 +63,7 @@ int	main()
 {
 	char	buff[25] = "Gordo, vamos, despierta";
 	char	*k;
-	k = ft_strnstr(buff, "deposito", 2);
+	k = ft_strnstr(((void*)0), "deposito", 2);
 	printf("Cadena final: %s\n", k);
 	return 0;
 }*/
