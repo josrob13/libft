@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:21:41 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 20:56:11 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 21:28:38 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	res = 0;
 	if ((!big || !little) && !len)
 		return (NULL);
-	if (*little == '\0')
-		return ((char *)big);
+	if (little[i] == '\0')
+		return ((char *) big);
 	res = ft_strlen(little);
 	if (res > len)
 		return (NULL);

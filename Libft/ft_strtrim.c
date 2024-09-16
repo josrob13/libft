@@ -6,13 +6,13 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:00:40 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 20:38:23 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 21:28:52 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	char	*ft_strncpy(char *dst, const char restrict *src, size_t n)
+static	char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
 	int	i;
 
