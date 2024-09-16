@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:39:28 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:13:48 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 20:36:25 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlen(const char *s)
 {
 	size_t	res;
-	
+
 	res = 0;
 	while (s[res])
 		res++;

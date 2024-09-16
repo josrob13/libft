@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:00:57 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 18:38:11 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 21:00:21 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,13 @@ static	char	*aux(char *res)
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
-	int	i;
-	int	s_len;
+	int		i;
+	int		s_len;
 
 	i = 0;
 	s_len = ft_strlen(s);
 	if (start >= s_len)
 		return (aux(res));
-
 	if (len < s_len)
 		s_len = len;
 	res = (char *)malloc(s_len + 1);

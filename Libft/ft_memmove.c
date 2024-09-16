@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:29:48 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 19:37:56 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 20:53:42 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	else
 		while (n--)
 			b[n] = a[n];
-
 	return (dest);
 }
 

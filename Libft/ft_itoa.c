@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:54:45 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 19:40:02 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 21:09:59 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,13 @@ static	int	count_digits(int n)
 
 char	*ft_itoa(int n)
 {
-	char		*result;
-	int		len;
-	int		limit;
-	unsigned int	num;
+	unsigned int		num;
+	char				*result;
+	int					len;
+	int					limit;
 
 	len = count_digits(n);
-	result = (char *)malloc((len+1) * sizeof(char));
+	result = (char *)malloc((len + 1) * sizeof(char));
 	if (!result)
 		return (NULL);
 	result[len] = '\0';

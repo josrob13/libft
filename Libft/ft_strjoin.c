@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:59:33 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 18:54:23 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 20:56:30 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!res)
 		return (NULL);
 	res[0] = '\0';
-
 	res = ft_strcat(res, s1);
 	res = ft_strcat(res, s2);
-
 	return (res);
 }
 

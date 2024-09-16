@@ -6,16 +6,16 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:33:46 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:14:33 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 20:37:15 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char* s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*res;
-	
+
 	res = NULL;
 	while (*s != '\0')
 	{

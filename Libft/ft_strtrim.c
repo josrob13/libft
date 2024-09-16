@@ -6,13 +6,13 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:00:40 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:47:30 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 20:38:23 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	char *ft_strncpy(char *dst, const char *restrict src, size_t n)
+static	char	*ft_strncpy(char *dst, const char restrict *src, size_t n)
 {
 	int	i;
 
@@ -45,9 +45,9 @@ static	int	is_inside(char c, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*res;
-	int	i;
-	int	start;
-	int	end;
+	int		i;
+	int		start;
+	int		end;
 
 	i = 0;
 	while (s1[i] != '\0' && is_inside(s1[i], set))
@@ -64,7 +64,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	res = ft_strncpy(res, s1 + start, (end - start));
 	res[end - start] = '\0';
-
 	return (res);
 }
 

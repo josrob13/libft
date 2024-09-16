@@ -6,13 +6,13 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:38:59 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:11:27 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 20:35:59 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char* s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s != '\0')
 	{
