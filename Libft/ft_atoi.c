@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:27:19 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:07:18 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 19:08:25 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	ft_atoi(const char* s)
 	int	res;
 	int	i;
 	int	sign;
+
 	i = 0;
 	sign = 1;
 	res = 0;
@@ -34,7 +35,7 @@ int	ft_atoi(const char* s)
 		res = res * 10 + (s[i] - '0');
 		i++;
 	}
-	return res * sign;
+	return (res * sign);
 }
 
 /*

@@ -15,6 +15,7 @@
 static	char *ft_strncpy(char *dst, const char *restrict src, size_t n)
 {
 	int	i;
+
 	i = 0;
 	while (i < n && src[i] != '\0')
 	{
@@ -26,7 +27,7 @@ static	char *ft_strncpy(char *dst, const char *restrict src, size_t n)
 		dst[i] = '\0';
 		i++;
 	}
-	return dst;
+	return (dst);
 }
 
 static	int	is_inside(char c, char const *set)
@@ -34,10 +35,10 @@ static	int	is_inside(char c, char const *set)
 	while (*set != '\0')
 	{
 		if (*set == c)
-			return 1;
+			return (1);
 		set++;
 	}
-	return 0;
+	return (0);
 }
 
 // Always using ft_strncpy, could save it doing more lines in the if zone
@@ -47,6 +48,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	i;
 	int	start;
 	int	end;
+
 	i = 0;
 	while (s1[i] != '\0' && is_inside(s1[i], set))
 		i++;
@@ -59,11 +61,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start = end;
 	res = (char *) malloc(end - start + 1);
 	if (!res)
-		return NULL;
+		return (NULL);
 	res = ft_strncpy(res, s1 + start, (end - start));
 	res[end - start] = '\0';
 
-	return res;
+	return (res);
 }
 
 /*

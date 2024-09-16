@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:40:02 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:08:04 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 19:09:17 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	isalnum(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return 1;
+		return (1);
 	else if (c >= '0' && c <= '9')
-		return 1;
-	return 0;
+		return (1);
+	return (0);
 }

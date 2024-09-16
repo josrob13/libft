@@ -24,7 +24,7 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 	dst_l = ft_strlen(dst);
 	src_l = ft_strlen(src);
 	if (size <= dst_l + 1)		// Comparing reserved bytes
-		return size + src_l;
+		return (size + src_l);
 	if (src_l < size - dst_l - 1)
 		ft_memcpy(dst + dst_l, src, src_l + 1);
 	else
@@ -32,7 +32,7 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 		ft_memcpy(dst + dst_l, src, size - dst_l - 1);
 		dst[size - 1] = '\0';
 	}
-	return dst_l + src_l;
+	return (dst_l + src_l);
 }
 
 /*

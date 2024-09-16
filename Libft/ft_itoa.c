@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:54:45 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:08:53 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 18:55:11 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 static	int count_digits(int n)
 {
 	int	cont;
+
 	cont = 0;
 	if (n <= 0)
 		cont++;
@@ -23,7 +24,7 @@ static	int count_digits(int n)
 		n /= 10;
 		cont++;
 	}
-	return cont;
+	return (cont);
 }
 
 char	*ft_itoa(int n)
@@ -35,6 +36,8 @@ char	*ft_itoa(int n)
 
 	len = count_digits(n);
 	result = (char *)malloc((len+1) * sizeof(char));
+	if (!result)
+		return (NULL);
 	result[len] = '\0';
 	num = n;
 	limit = 0;
@@ -49,7 +52,7 @@ char	*ft_itoa(int n)
 		result[len] = (num % 10) + '0';
 		num /= 10;
 	}
-	return result;
+	return (result);
 }
 
 /*

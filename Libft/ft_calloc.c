@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:36:02 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 17:07:38 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 19:08:52 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 void	*ft_calloc(size_t nelem, size_t elsize)
 {
 	void	*res;
+
 	res = malloc(nelem * elsize);
 	if (!res)
-		return NULL;
+		return (NULL);
 	ft_bzero(res, nelem * elsize);
-	return res;
+	return (res);
 }

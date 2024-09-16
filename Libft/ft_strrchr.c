@@ -15,6 +15,7 @@
 char	*ft_strrchr(const char* s, int c)
 {
 	char	*res;
+	
 	res = NULL;
 	while (*s != '\0')
 	{
@@ -24,7 +25,7 @@ char	*ft_strrchr(const char* s, int c)
 	}
 	if ((unsigned char)c == '\0')
 		res = (char *)s;
-	return res;
+	return (res);
 }
 
 /*
