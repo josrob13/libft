@@ -6,16 +6,16 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:21:41 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 22:16:54 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 22:19:10 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	keep(int *res, int j)
+static void	keep(int *res, int *j)
 {
-	*res++;
-	*j++;
+	(*res)++;
+	(*j)++;
 }
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
