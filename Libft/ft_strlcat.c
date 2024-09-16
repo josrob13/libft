@@ -6,7 +6,7 @@
 /*   By: jvillagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:32:59 by jvillagr          #+#    #+#             */
-/*   Updated: 2024/09/16 20:52:16 by jvillagr         ###   ########.fr       */
+/*   Updated: 2024/09/16 21:54:00 by jvillagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ static unsigned int	get_maximum(char *dest, unsigned int size)
 	i = 0;
 	while (dest[i] && size > 0)
 	{
-		i++;
 		size--;
+		i++;
 	}
 	return (i);
 }
@@ -29,18 +29,18 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
-	size_t	leng_dest;
-	size_t	leng_source;
+	size_t	src_l;
+	size_t	dest_l;
 
-	if ((!dest || !src) && !size)
+	if ((!src || !dest) && !size)
 		return (0);
-	i = get_maximum(dest, size);
+	src_l = ft_strlen(src);
+	dest_l = get_maximum(dest, size);
 	j = 0;
-	leng_dest = get_maximum(dest, size);
-	leng_source = ft_strlen(src);
+	i = get_maximum(dest, size);
 	if (size < 1)
-		return (leng_source + size);
-	while (src[j] != '\0' && i < size - 1)
+		return (src_l + size);
+	while (src[j] && i < size - 1)
 	{
 		dest[i] = src[j];
 		i++;
@@ -48,10 +48,9 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	}
 	if (i < size)
 		dest[i] = '\0';
-	if (size < leng_dest)
-		return (leng_source + size);
-	else
-		return (leng_dest + leng_source);
+	if (size < dest_l)
+		return (src_l + size);
+	return (dest_l + src_l);
 }
 
 /*
